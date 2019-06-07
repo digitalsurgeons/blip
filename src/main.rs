@@ -16,7 +16,7 @@ struct Args {
     markupExtension: String,
 
     // Extension for styles
-    #[structopt(short = "s", long = "styles-extension", default_value = ".css")]
+    #[structopt(short = "s", long = "styles-extension", default_value = ".pcss")]
     stylesExtension: String,
 
     // Extension for scripts
