@@ -1,0 +1,3 @@
+.{{Component}} {
+  /* component styles go here */
+}

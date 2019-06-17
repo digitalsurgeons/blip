@@ -1,0 +1,15 @@
+[package]
+name = "blip"
+version = "0.1.0"
+authors = ["jekrb <jake@burden.blog>"]
+edition = "2018"
+description = "A CLI to scaffold component structures typical in Digital Surgeons projects."
+repository = "https://github.com/digitalsurgeons/blip"
+readme = "https://github.com/digitalsurgeons/blip/blob/master/README.md"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = { git = "https://github.com/TeXitoi/structopt", version = "0.3", features = [ "paw" ] }
+paw = "1.0.0"
