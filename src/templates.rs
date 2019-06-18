@@ -5,6 +5,7 @@ static MARKUP_FILE: &str = include_str!("../templates/markup.txt");
 static SCRIPTS_FILE: &str = include_str!("../templates/scripts.txt");
 static STYLES_FILE: &str = include_str!("../templates/styles.txt");
 static EMOTION_FILE: &str = include_str!("../templates/emotion.txt");
+static VUE_FILE: &str = include_str!("../templates/vue.txt");
 
 pub fn write_all(component: &str, args: &super::cli::Args) -> Result<(), std::io::Error> {
     fs::create_dir(&component)?;
@@ -16,6 +17,11 @@ pub fn write_all(component: &str, args: &super::cli::Args) -> Result<(), std::io
         let emotion_path = format!("./{}/styles.js", &component);
         let path = Path::new(&emotion_path);
         fs::write(path, EMOTION_FILE)?;
+    } else if args.vue {
+        let vue_file = generate(VUE_FILE, &component);
+        let vue_path = format!("./{}/index.vue", &component);
+        let path = Path::new(&vue_path);
+        fs::write(path, vue_file)?;
     } else {
         if !args.ignore.contains(&"markup".to_string()) {
             let markup_file = generate(MARKUP_FILE, &component);

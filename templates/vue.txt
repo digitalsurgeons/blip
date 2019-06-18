@@ -1,0 +1,33 @@
+<template>
+  <section class="{{Component}}">
+
+  </section>
+</template>
+
+<script>
+module.exports = {
+  name: "{{Component}}",
+  props: {
+
+  },
+  data: () => {
+    return {
+    }
+  },
+  computed: {
+
+  },
+  methods: {
+
+  },
+  watch: {
+
+  }
+}
+</script>
+
+<style scoped>
+.{{Component}} {
+  
+}
+</style>

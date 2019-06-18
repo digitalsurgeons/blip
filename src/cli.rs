@@ -24,4 +24,8 @@ pub struct Args {
     /// Generate React templates
     #[structopt(short = "r", long = "react")]
     pub react: bool,
+
+    /// Generate Vue templates
+    #[structopt(short = "v", long = "vue")]
+    pub vue: bool,
 }
